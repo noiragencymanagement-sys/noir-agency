@@ -116,7 +116,7 @@ h3 {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url("assets/hintergrundv2.jpeg") center/cover no-repeat;
+    background: url("hintergrundv2.jpeg") center/cover no-repeat;
     filter: contrast(1.05) brightness(0.9);
     opacity: 0.35;
     z-index: -2;

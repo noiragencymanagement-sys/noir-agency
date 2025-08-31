@@ -8,6 +8,9 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+
+<div class="background-container"></div>
+
 <header class="navbar">
     <a class="logo" href="#home">
         <img src="assets/logo.png" alt="Noir Agency Logo" />
@@ -19,13 +22,12 @@
         <a href="#apply">Apply</a>
         <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#agb">AGB</a>
+        <a href="#impressum">Impressum</a>
     </nav>
     <div class="social-links">
-        <a
-                href="https://instagram.com/noirmanagementagency"
-                target="_blank"
-                rel="noopener"
-        >
+        <a href="https://instagram.com/noirmanagementagency" target="_blank" rel="noopener">
             <img src="assets/instagram.svg" alt="Instagram" />
         </a>
         <a href="https://x.com/noir_m_agency" target="_blank" rel="noopener">
@@ -38,7 +40,6 @@
 </header>
 
 <section id="home" class="hero">
-    <div class="hero-bg"></div>
     <div class="hero-text reveal">
         <p class="eyebrow">EST 2025</p>
         <h1>NOIR AGENCY</h1>
@@ -67,18 +68,9 @@
         </p>
         <h3>Our Values</h3>
         <ul>
-            <li>
-                <strong>Discretion:</strong> We safeguard your privacy and reputation at
-                every stage.
-            </li>
-            <li>
-                <strong>Transparency:</strong> We ensure clear communication with no
-                hidden fees or surprises.
-            </li>
-            <li>
-                <strong>Results:</strong> Our success is measured by your success —
-                we win only when you do.
-            </li>
+            <li><strong>Discretion:</strong> We safeguard your privacy and reputation at every stage.</li>
+            <li><strong>Transparency:</strong> We ensure clear communication with no hidden fees or surprises.</li>
+            <li><strong>Results:</strong> Our success is measured by your success — we win only when you do.</li>
         </ul>
     </div>
     <div class="about-logo reveal">
@@ -95,10 +87,7 @@
                 <span class="icon">+</span>
             </button>
             <div class="step-panel" id="step-1">
-                <p>
-                    Apply through our page. Fill in the form and let us know about
-                    your goals.
-                </p>
+                <p>Apply through our page. Fill in the form and let us know about your goals.</p>
             </div>
         </div>
         <div class="step reveal">
@@ -107,13 +96,7 @@
                 <span class="icon">+</span>
             </button>
             <div class="step-panel" id="step-2">
-                <p>
-                    We begin by thoroughly analyzing your profiles and developing a
-                    tailored growth strategy designed for long-term success. You
-                    simply provide your content once a week via a secure cloud upload,
-                    and our team manages the rest — from uploads and messaging to
-                    social media management and audience engagement.
-                </p>
+                <p>We begin by thoroughly analyzing your profiles and developing a tailored growth strategy designed for long-term success...</p>
             </div>
         </div>
         <div class="step reveal">
@@ -122,10 +105,7 @@
                 <span class="icon">+</span>
             </button>
             <div class="step-panel" id="step-3">
-                <p>
-                    Once the System runs, we scale your income. More fans, more sales,
-                    less effort from you.
-                </p>
+                <p>Once the System runs, we scale your income. More fans, more sales, less effort from you.</p>
             </div>
         </div>
     </div>
@@ -137,43 +117,22 @@
         <article class="card">
             <img src="assets/service1.jpeg" alt="Full Service" />
             <h3>Full Service</h3>
-            <p>
-                We take care of everything behind the scenes — from strategy and
-                marketing to chats and promotion — so you can fully focus on
-                creating the content that drives your brand forward.
-            </p>
+            <p>We take care of everything behind the scenes — from strategy and marketing to chats and promotion...</p>
         </article>
         <article class="card">
             <img src="assets/service2.jpeg" alt="Account Management" />
             <h3>Account Management</h3>
-            <p>
-                We manage all messages to maximize tips, pay-per-view content,
-                and custom requests, ensure consistent daily posting and
-                scheduling, and optimize your profile to convert more visitors
-                into paying subscribers.
-            </p>
+            <p>We manage all messages to maximize tips, pay-per-view content, and custom requests...</p>
         </article>
         <article class="card">
             <img src="assets/service3.jpeg" alt="Multi-Platform Scaling" />
             <h3>Multi-Platform Scaling</h3>
-            <p>
-                We scale your brand across Instagram, TikTok, Twitter, and more
-                — expanding your reach, building loyal audiences, and converting
-                followers into paying subscribers. We also secure promo deals to
-                accelerate growth.
-            </p>
+            <p>We scale your brand across Instagram, TikTok, Twitter, and more...</p>
         </article>
         <article class="card">
-            <img
-                    src="assets/service4.jpeg"
-                    alt="Around the Clock Support"
-            />
+            <img src="assets/service5.jpeg" alt="Around the Clock Support" />
             <h3>Around the Clock Support</h3>
-            <p>
-                We’re available around the clock to keep your business running
-                smoothly. Our team is always on hand to answer questions, manage
-                updates, and ensure your account never misses a beat.
-            </p>
+            <p>We’re available around the clock to keep your business running smoothly...</p>
         </article>
     </div>
 </section>
@@ -181,9 +140,7 @@
 <section id="apply" class="apply">
     <div class="apply-card reveal">
         <h2>Apply</h2>
-        <p>
-            Please fill out the form below and we'll get back to you as soon as
-            possible.
+        <p>Please fill out the form below and we'll get back to you as soon as possible.</p>
         <form id="contact-form" action="https://formspree.io/f/xnnbdayp" method="POST">
             <div class="field-group two">
                 <div class="field">
@@ -209,6 +166,14 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6"></textarea>
             </div>
+
+            <div class="field-group privacy-consent">
+                <input type="checkbox" id="privacy-policy" name="privacy-policy" required />
+                <label for="privacy-policy">
+                    Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> gelesen und bin einverstanden.
+                </label>
+            </div>
+
             <button type="submit" class="btn wide">SEND MESSAGE</button>
             <div class="form-status"></div>
         </form>
@@ -218,25 +183,13 @@
 <section id="contact" class="contact">
     <div class="contact-card reveal">
         <h2>CONTACT US</h2>
-        <p>
-            EMAIL:
-            <a href="mailto:noiragency.management@gmail.com" target="_blank">
-                noiragency.management@gmail.com
-            </a>
-        </p>
-        <p>
-            INSTAGRAM:
-            <a href="https://instagram.com/noirmanagementagency" target="_blank">
-                @noirmanagementagency
-            </a>
-        </p>
+        <p>EMAIL: <a href="mailto:noiragency.management@gmail.com" target="_blank">noiragency.management@gmail.com</a></p>
+        <p>INSTAGRAM: <a href="https://instagram.com/noirmanagementagency" target="_blank">@noirmanagementagency</a></p>
     </div>
 </section>
 
-
 <section id="faq" class="faq">
     <h2 class="reveal">FAQ</h2>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-1">
             <h3>How do I apply?</h3>
@@ -246,7 +199,6 @@
             <p>Click the "APPLY" button and fill out the form. Our team will review your application and contact you.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-2">
             <h3>What platforms do you manage?</h3>
@@ -256,7 +208,6 @@
             <p>We manage OnlyFans, Instagram, TikTok, Reddit and X (Twitter). We also expand to other platforms depending on your niche.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-3">
             <h3>Do I keep control of my accounts?</h3>
@@ -266,8 +217,6 @@
             <p>Yes — you always retain ownership of your accounts. We just manage and optimize them for you.</p>
         </div>
     </div>
-
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-5">
             <h3>Is there an upfront cost?</h3>
@@ -277,7 +226,6 @@
             <p>No. We only earn when you earn — our success depends on yours.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-6">
             <h3>What kind of creators do you work with?</h3>
@@ -287,7 +235,6 @@
             <p>We partner with motivated creators who are serious about growing their brand and income sustainably.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-7">
             <h3>How often do I need to send content?</h3>
@@ -297,7 +244,6 @@
             <p>We align on your individual goals together, creating a work plan that meets both your needs and our objectives. In close collaboration, we determine where and when you work, allowing you to perfectly balance your professional development with your personal life.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-8">
             <h3>Do you guarantee results?</h3>
@@ -307,7 +253,6 @@
             <p>We can’t promise specific numbers, but we build proven strategies that consistently grow revenue for our creators.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-9">
             <h3>What about privacy?</h3>
@@ -317,7 +262,6 @@
             <p>Your privacy is our top priority. All information, content, and communication are handled with complete discretion.</p>
         </div>
     </div>
-
     <div class="faq-item reveal">
         <button class="faq-header" data-target="faq-10">
             <h3>How do I start?</h3>
@@ -328,6 +272,159 @@
         </div>
     </div>
 </section>
+
+<section id="datenschutz" class="datenschutz-section">
+    <div class="datenschutz-content">
+        <h2>Datenschutzerklärung</h2>
+
+        <h3>Verantwortlicher</h3>
+        <p>Verantwortlicher im Sinne der Datenschutzgesetze ist:</p>
+        <p>
+            Leon Suljic & Jonas Bartels<br>
+            Badeteichstraße 31<br>
+            39126 Magdeburg<br>
+            E-Mail: noiragency.management@gmail.com
+        </p>
+
+        <h3>Ihre Betroffenenrechte</h3>
+        <p>
+            Sie können jederzeit folgende Rechte ausüben:
+        </p>
+        <ul>
+            <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung.</li>
+            <li>Berichtigung unrichtiger personenbezogener Daten.</li>
+            <li>Löschung Ihrer bei uns gespeicherten Daten.</li>
+            <li>Einschränkung der Datenverarbeitung.</li>
+            <li>Widerspruch gegen die Verarbeitung Ihrer Daten bei uns.</li>
+            <li>Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben.</li>
+        </ul>
+        <p>
+            Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen. Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die für uns zuständige Behörde.
+        </p>
+
+        <h3>Erfassung allgemeiner Informationen beim Besuch unserer Website</h3>
+        <p>
+            Wenn Sie auf unsere Website zugreifen, werden automatisch Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und Ähnliches. Diese Daten dienen der technischen Gewährleistung und der Verbesserung unserer Website. Hierbei handelt es sich ausschließlich um Informationen, welche keine Rückschlüsse auf Ihre Person zulassen.
+        </p>
+
+        <h3>Hosting und E-Mail-Versand</h3>
+        <p>
+            Die Website wird bei [Name des Hosters] gehostet. Dieser verarbeitet alle Daten, die auf den Servern der Website anfallen. Dazu gehören auch die Inhalte, die Sie über unser Kontaktformular versenden. Die Daten werden ausschließlich zur Bereitstellung der Website verarbeitet.
+        </p>
+        <p>
+            Der Versand von E-Mails, die über das Kontaktformular an uns gesendet werden, erfolgt über den Dienst Formspree. Die Daten werden direkt an uns weitergeleitet und auf den Servern von Formspree nicht dauerhaft gespeichert.
+        </p>
+
+        <h3>Kontaktformular</h3>
+        <p>
+            Die von Ihnen eingegebenen Daten werden zum Zweck der individuellen Kommunikation mit Ihnen gespeichert und verarbeitet. Hierfür ist die Angabe einer gültigen E-Mail-Adresse sowie Ihres Namens erforderlich. Diese dient der Zuordnung der Anfrage und der anschließenden Beantwortung derselben. Die Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.
+        </p>
+        <p>
+            <strong>Rechtsgrundlage:</strong> Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt auf Grundlage eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO). Unser berechtigtes Interesse liegt in der Beantwortung Ihrer Anfragen.
+        </p>
+        <p>
+            <strong>Datenlöschung:</strong> Die Daten werden gelöscht, sobald sie für den Zweck der Verarbeitung nicht mehr erforderlich sind. Für die Daten aus dem Kontaktformular ist dies der Fall, wenn die jeweilige Konversation mit Ihnen beendet ist. Beendet ist die Konversation, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist.
+        </p>
+
+        <h3>Soziale Medien</h3>
+        <p>
+            Wir betreiben Seiten auf Instagram, TikTok, X (Twitter) und YouTube. Wenn Sie diese Netzwerke besuchen, werden Ihre Daten vom jeweiligen Betreiber erfasst. Beachten Sie, dass Sie hierbei den Datenschutzbestimmungen des jeweiligen Anbieters unterliegen.
+        </p>
+
+        <h3>Änderung unserer Datenschutzbestimmungen</h3>
+        <p>
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services.
+        </p>
+    </div>
+</section>
+
+<section id="agb" class="agb-section">
+    <div class="agb-content">
+        <h2>Allgemeine Geschäftsbedingungen</h2>
+        <p>
+            Die Geschäftsbeziehung zwischen Noir Agency und unseren Partnern wird durch einen individuellen Agenturvertrag geregelt. Dieser Vertrag dient als rechtliche Grundlage für unsere Management- und Vermarktungsdienstleistungen.
+        </p>
+        <p>
+            Eine Kopie des vollständigen Vertrags kann bei Interesse per E-Mail angefordert werden. Wir haften, soweit gesetzlich zulässig, nur für vorsätzliche und grob fahrlässige Pflichtverletzungen.
+        </p>
+    </div>
+</section>
+
+<section id="impressum" class="impressum-section reveal">
+    <div class="impressum-content">
+        <h2>Impressum</h2>
+        <p>
+            Leon Suljic<br>
+            Badeteichstraße 31<br>
+            39126 Magdeburg<br>
+            Deutschland
+        </p>
+        <p>
+            Jonas Bartels<br>
+            Matthissonstraße 5<br>
+            39108 Magdeburg<br>
+            Deutschland
+        </p>
+        <p>
+            E-Mail: <a href="mailto:noiragency.management@gmail.com">noiragency.management@gmail.com</a>
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#datenschutz">Datenschutz</a> | <a href="#agb">AGB</a> | <a href="#impressum">Impressum</a>
+    </div>
+</footer>
+
+<script>
+    // Reveal-Funktion für Elemente beim Scrollen
+    function revealOnScroll() {
+        const els = document.querySelectorAll(".reveal");
+        const windowH = window.innerHeight;
+        els.forEach((el) => {
+            const top = el.getBoundingClientRect().top;
+            if (top < windowH - 100) {
+                el.classList.add("visible");
+            }
+        });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+
+    // Akkordeon-Funktion für "How it Works"
+    document.querySelectorAll(".step-header").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const targetId = btn.getAttribute("data-target");
+            const panel = document.getElementById(targetId);
+            btn.classList.toggle("active");
+            panel.classList.toggle("open");
+        });
+    });
+
+    // Akkordeon-Funktion für FAQ
+    document.querySelectorAll(".faq-header").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const target = document.getElementById(btn.dataset.target);
+            btn.classList.toggle("active");
+            target.classList.toggle("open");
+        });
+    });
+
+    // Header ausblenden beim Scrollen nach unten
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            navbar.classList.add('hidden');
+        } else {
+            navbar.classList.remove('hidden');
+        }
+        lastScrollY = window.scrollY;
+    });
+
+</script>
 
 </body>
 </html>

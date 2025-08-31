@@ -23,9 +23,35 @@ body {
 }
 
 body {
+    background: transparent;
+    color: var(--ink);
+    position: relative;
+}
+
+/* Neuer Container für den Hintergrund */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url("assets/home.jpeg") no-repeat center center fixed;
     background-size: cover;
-    color: var(--ink);
+    z-index: -1;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* Hintergrundfarben für die Sektionen */
+section,
+.navbar,
+.footer,
+.datenschutz {
+    background-color: rgba(15, 15, 16, 0.85);
+}
+
+/* Die alte Hero-Hintergrundregel wird nicht mehr benötigt */
+.hero-bg {
+    display: none;
 }
 
 h1,
@@ -113,15 +139,6 @@ h3 {
     overflow: hidden;
 }
 
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    background: url("assets/home.jpeg") center/cover no-repeat;
-    filter: contrast(1.05) brightness(0.9);
-    opacity: 0.35;
-    z-index: -2;
-}
-
 .eyebrow {
     letter-spacing: 0.25em;
     opacity: 0.7;
@@ -159,6 +176,10 @@ h3 {
 .btn.wide {
     width: 100%;
     text-align: center;
+}
+
+.btn-hero-large {
+    padding: 20px 70px;
 }
 
 /* Sections generic */
@@ -258,6 +279,11 @@ section {
 }
 
 /* ========== Services (Grid) ========== */
+.services-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -296,7 +322,7 @@ section {
     border: 1px solid var(--line);
     border-radius: 8px;
     box-shadow: var(--shadow);
-    padding: clamp(28px, 3vw, 78px);
+    padding: clamp(18px, 3vw, 28px);
     max-width: 980px;
     margin: 0 auto;
 }
@@ -376,6 +402,28 @@ section {
 
 .form-status.error {
     background-color: #f44336;
+}
+
+/* Neue Regeln für die Datenschutzerklärung-Checkbox */
+.privacy-consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -8px; /* Optische Anpassung, um den Abstand zu den Feldern zu verringern */
+}
+
+.privacy-consent input[type="checkbox"] {
+    width: auto;
+}
+
+.privacy-consent label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.privacy-consent a {
+    color: var(--ink);
+    text-decoration: underline;
 }
 
 /* ========== FAQ ========== */
@@ -471,6 +519,119 @@ section {
     color: #aaa;
 }
 
+/* ========== Footer / Impressum ========== */
+.footer {
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-in-out;
+    pointer-events: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--ink-dim);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer-links a:hover {
+    color: var(--ink);
+}
+
+/* ========== Impressum ========== */
+.impressum-section {
+    padding: clamp(64px, 8vw, 104px) clamp(20px, 7vw, 80px);
+}
+
+.impressum-content {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.impressum-content h2,
+.impressum-content h3 {
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.impressum-content p,
+.impressum-content li {
+    color: var(--ink-dim);
+    line-height: 1.6;
+}
+
+/* Die neue CSS-Regel für den Link im Impressum */
+.impressum-content a {
+    color: var(--ink);
+}
+
+/* ========== Datenschutzerklärung ========== */
+.datenschutz-section {
+    padding: clamp(64px, 8vw, 104px) clamp(20px, 7vw, 80px);
+}
+
+.datenschutz-content {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.datenschutz-content h2,
+.datenschutz-content h3 {
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.datenschutz-content p {
+    color: var(--ink-dim);
+    line-height: 1.6;
+}
+
+.datenschutz-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.datenschutz-content li {
+    color: var(--ink-dim);
+    margin-bottom: 8px;
+}
+
+/* ========== AGB ========== */
+.agb-section {
+    padding: clamp(64px, 8vw, 104px) clamp(20px, 7vw, 80px);
+}
+
+.agb-content {
+    max-width: 980px;
+    margin: 0 auto;
+    color: var(--ink);
+}
+
+.agb-content h2 {
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.agb-content p {
+    color: var(--ink-dim);
+    line-height: 1.6;
+}
+
 /* ========== Responsive ========== */
 @media (max-width: 980px) {
     .hero {
@@ -495,10 +656,10 @@ section {
         display: none;
     }
 }
-.services-heading {
-    text-align: center;
-    margin-bottom: 48px;
-}
-.btn-hero-large {
-    padding: 20px 70px; /* Adjust these values to control button size */
+
+/* Mobile Fix für den Hintergrund */
+@media (max-width: 768px) {
+    .background-container {
+        background-attachment: scroll;
+    }
 }
